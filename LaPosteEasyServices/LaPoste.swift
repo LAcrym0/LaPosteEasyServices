@@ -45,6 +45,37 @@ public class LaPoste {
 
     }
     
+    class func getTrack(code: String, completionHandler: @escaping (Array<PriceResponse>?, Error?) -> ()) {
+        let headers: HTTPHeaders = [
+            "X-Okapi-Key":LaPoste.serverKey,
+            "Accept": "application/json"
+        ]
+        print("---Request prepared---")
+        
+        Alamofire.request("https://api.laposte.fr/suivi/v1/?code=\(code)", headers: headers)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+                print("---Response received---")
+                //print(response)
+                switch response.result {
+                case .success(let value):
+                    let array = value as! Array<Any>
+                    var responses: [PriceResponse] = []
+                    for i in (0..<array.count) {
+                        if let resp = PriceResponse(json: array[i] as! [String : Any]) {
+                            responses.append(resp)
+                            //print(resp.channel)
+                        }
+                    }
+                    completionHandler(responses, nil)
+                case .failure(let error):
+                    completionHandler(nil, error)
+                }
+        }
+        
+    }
+
+    
     /*class func getPrice(type: String, weight: Int) {//-> String? {
         let headers: HTTPHeaders = [
             "X-Okapi-Key":serverKey
