@@ -26,12 +26,16 @@ class LaPosteEasyServicesTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let expectations = expectation(description: "\(#function)\(#line)")
         print("------BEGIN------")
-        LaPoste.getPackagePrice(type: "colis", weight: 1300) { value, error in
+        LaPoste.getPackagePrice(type: "Colis", weight: 1300) { value, error in
             // use responseObject and error here
             XCTAssert(error == nil, "OK")
-            print("value = \(value); error = \(error)")
+            //print("value = \(value); error = \(error)")
             if (value != nil) {
-                print("value = \(value!)")
+                let tab = value! as Array<PriceResponse>
+                for i in (0..<tab.count) {
+                    print("\(tab[i].product) : \(tab[i].channel)")
+                    print("Price : \(tab[i].price)\(tab[i].currency)")
+                }
             }
             print("------END------")
             expectations.fulfill()

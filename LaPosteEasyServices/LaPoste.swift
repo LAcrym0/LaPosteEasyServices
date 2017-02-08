@@ -15,7 +15,7 @@ public class LaPoste {
     static let apiUrl = "https://api.laposte.fr/"
     static let apiEndPoint = "tarifenvoi/v1{?"
 
-    class func getPackagePrice(type: String, weight: Int, completionHandler: @escaping (Array<Any>?, Error?) -> ()) {
+    class func getPackagePrice(type: String, weight: Int, completionHandler: @escaping (Array<PriceResponse>?, Error?) -> ()) {
         let headers: HTTPHeaders = [
             "X-Okapi-Key":LaPoste.serverKey,
             "Accept": "application/json"
@@ -29,7 +29,15 @@ public class LaPoste {
                 //print(response)
                 switch response.result {
                 case .success(let value):
-                    completionHandler(value as? Array<Any>, nil)
+                    let array = value as! Array<Any>
+                    var responses: [PriceResponse] = []
+                    for i in (0..<array.count) {
+                        if let resp = PriceResponse(json: array[i] as! [String : Any]) {
+                            responses.append(resp)
+                            //print(resp.channel)
+                        }
+                    }
+                    completionHandler(responses, nil)
                 case .failure(let error):
                     completionHandler(nil, error)
                 }
