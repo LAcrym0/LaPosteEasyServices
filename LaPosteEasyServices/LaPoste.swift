@@ -15,18 +15,21 @@ public class LaPoste {
     static let apiUrl = "https://api.laposte.fr/"
     static let apiEndPoint = "tarifenvoi/v1{?"
 
-    class func getPackagePrice(type: String, weight: Int, completionHandler: @escaping (NSDictionary?, Error?) -> ()) {
+    class func getPackagePrice(type: String, weight: Int, completionHandler: @escaping (Array<Any>?, Error?) -> ()) {
         let headers: HTTPHeaders = [
-            "X-Okapi-Key":LaPoste.serverKey
+            "X-Okapi-Key":LaPoste.serverKey,
+            "Accept": "application/json"
         ]
         print("---Request prepared---")
         
         Alamofire.request("https://api.laposte.fr/tarifenvoi/v1?type=\(type)&weight=\(weight)", headers: headers)
+            .validate(contentType: ["application/json"])
             .responseJSON { response in
                 print("---Response received---")
+                //print(response)
                 switch response.result {
                 case .success(let value):
-                    completionHandler(value as? NSDictionary, nil)
+                    completionHandler(value as? Array<Any>, nil)
                 case .failure(let error):
                     completionHandler(nil, error)
                 }

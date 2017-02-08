@@ -24,14 +24,17 @@ class LaPosteEasyServicesTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        _ = expectation(description: "\(#function)\(#line)")
+        let expectations = expectation(description: "\(#function)\(#line)")
         print("------BEGIN------")
-        LaPoste.getPackagePrice(type: "colis", weight: 1300) { responseObject, error in
+        LaPoste.getPackagePrice(type: "colis", weight: 1300) { value, error in
             // use responseObject and error here
-            
-            print("responseObject = \(responseObject); error = \(error)")
             XCTAssert(error == nil, "OK")
+            print("value = \(value); error = \(error)")
+            if (value != nil) {
+                print("value = \(value!)")
+            }
             print("------END------")
+            expectations.fulfill()
         }
         self.waitForExpectations(timeout: 15, handler: nil)
     }
