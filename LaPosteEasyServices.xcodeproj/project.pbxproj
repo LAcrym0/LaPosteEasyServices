@@ -14,6 +14,7 @@
 		A55638B41E4C6D7D00F14BEE /* LaPosteEasyServices.h in Headers */ = {isa = PBXBuildFile; fileRef = A55638A61E4C6D7D00F14BEE /* LaPosteEasyServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A55638BF1E4C6E5200F14BEE /* LaPoste.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55638BD1E4C6E5200F14BEE /* LaPoste.swift */; };
 		A55638C01E4C6E5200F14BEE /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55638BE1E4C6E5200F14BEE /* PriceResponse.swift */; };
+		A5B17A501E4CA5D000B06192 /* TrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B17A4F1E4CA5D000B06192 /* TrackResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A55638B31E4C6D7D00F14BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55638BD1E4C6E5200F14BEE /* LaPoste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaPoste.swift; sourceTree = "<group>"; };
 		A55638BE1E4C6E5200F14BEE /* PriceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
+		A5B17A4F1E4CA5D000B06192 /* TrackResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackResponse.swift; sourceTree = "<group>"; };
 		B2B89C3E447F04BADBDF30E8 /* Pods-LaPosteEasyServicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServicesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServicesTests/Pods-LaPosteEasyServicesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C6D0181236BE7556E53E77FE /* Pods-LaPosteEasyServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServices/Pods-LaPosteEasyServices.release.xcconfig"; sourceTree = "<group>"; };
 		E78EB69AFCA0C507930F2A11 /* Pods-LaPosteEasyServicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServicesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServicesTests/Pods-LaPosteEasyServicesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				A55638BE1E4C6E5200F14BEE /* PriceResponse.swift */,
 				A55638A61E4C6D7D00F14BEE /* LaPosteEasyServices.h */,
 				A55638A71E4C6D7D00F14BEE /* Info.plist */,
+				A5B17A4F1E4CA5D000B06192 /* TrackResponse.swift */,
 			);
 			path = LaPosteEasyServices;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A55638C01E4C6E5200F14BEE /* PriceResponse.swift in Sources */,
+				A5B17A501E4CA5D000B06192 /* TrackResponse.swift in Sources */,
 				A55638BF1E4C6E5200F14BEE /* LaPoste.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

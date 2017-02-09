@@ -69,19 +69,24 @@ class LaPosteEasyServicesTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //codes : Valid : 6Q03256365541
+    //codes : Valid : 8G00466375322
     //Invalid : 6A06489133413 (too old)
     //Invalid : 8J13257432657
     
     func testTrack() {
         let expectations = expectation(description: "\(#function)\(#line)")
         print("------BEGIN------")
-        LaPoste.getTrack(code: "6A06489133413"){ value, error in
+        LaPoste.getTrack(code: "8G00466375322"){ value, error in
             // use responseObject and error here
             XCTAssert(error == nil, "OK")
             //print("value = \(value); error = \(error)")
             if (value != nil) {
-                print(value!)
+                let track = value! as TrackResponse
+                if (track.status == nil){
+                    print("Erreur. \(track.message)")
+                } else {
+                    print("\(track.type!) numéro \(track.code). \(track.message) : \(track.status!). \nDernière modification : \(track.date!). Plus d'infos : \(track.link!)")
+                }
             }
             print("------END------")
             expectations.fulfill()

@@ -45,7 +45,7 @@ public class LaPoste {
         
     }
     
-    class func getTrack(code: String, completionHandler: @escaping (NSDictionary?, Error?) -> ()) {
+    class func getTrack(code: String, completionHandler: @escaping (TrackResponse?, Error?) -> ()) {
         let headers: HTTPHeaders = [
             "X-Okapi-Key":LaPoste.serverKey,
             "Accept": "application/json"
@@ -59,44 +59,14 @@ public class LaPoste {
                 //print(response)
                 switch response.result {
                 case .success(let value):
-                    let array = value as! NSDictionary
-                    completionHandler(array, nil)
+                    print(value)
+                    let track = TrackResponse(json: value as! [String : Any])
+                    completionHandler(track, nil)
                 case .failure(let error):
                     completionHandler(nil, error)
                 }
         }
         
     }
-    
-    
-    /*class func getPrice(type: String, weight: Int) {//-> String? {
-     let headers: HTTPHeaders = [
-     "X-Okapi-Key":serverKey
-     ]
-     //var returnValue: DataResponse<Any>
-     Alamofire.request("https://api.laposte.fr/tarifenvoi/v1{?\(type),\(weight)}", headers: headers).responseJSON { response in
-     debugPrint(response)
-     //returnValue = response
-     }
-     //return returnValue.description
-     }*/
-    
-    
-    /*func makeCall(_ url: String, completionHandler: @escaping (NSDictionary?, Error?) -> ()) {
-     let headers: HTTPHeaders = [
-     "X-Okapi-Key":LaPoste.serverKey
-     ]
-     
-     
-     Alamofire.request(url, headers: headers)
-     .responseJSON { response in
-     switch response.result {
-     case .success(let value):
-     completionHandler(value as? NSDictionary, nil)
-     case .failure(let error):
-     completionHandler(nil, error)
-     }
-     }
-     }*/
 }
 
