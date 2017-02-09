@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ * The object that stores a PriceResponse object received by the web call
+ * The values can't be nil so if any value is nil a nil object is returned
+ **/
 public class PriceResponse{
 
     var channel: String = String()
@@ -27,6 +31,5 @@ public class PriceResponse{
         self.currency = currency
         self.price = price
         self.product = product
-        
     }
 }
