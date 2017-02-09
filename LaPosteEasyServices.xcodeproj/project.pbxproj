@@ -7,240 +7,226 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A076B17E968C53F682142FCD /* Pods_LaPosteEasyServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9297A7D4339BAC751AFE981 /* Pods_LaPosteEasyServices.framework */; };
-		C30D63F81E43B4F900FB505F /* LaPoste.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D63F71E43B4F900FB505F /* LaPoste.swift */; };
-		C323F31A1E43AFAF0051A682 /* LaPosteEasyServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C323F3101E43AFAF0051A682 /* LaPosteEasyServices.framework */; };
-		C323F31F1E43AFAF0051A682 /* LaPosteEasyServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323F31E1E43AFAF0051A682 /* LaPosteEasyServicesTests.swift */; };
-		C323F3211E43AFAF0051A682 /* LaPosteEasyServices.h in Headers */ = {isa = PBXBuildFile; fileRef = C323F3131E43AFAF0051A682 /* LaPosteEasyServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C34934F11E4A7D700029C0EF /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C34934EE1E4A7D180029C0EF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C3CB3E2C1E48FEB7003FB7C1 /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB3E2B1E48FEB7003FB7C1 /* PriceResponse.swift */; };
+		52E8DF00650A8F6DD48D49BD /* Pods_LaPosteEasyServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F41DDDE14EB47C402845931 /* Pods_LaPosteEasyServices.framework */; };
+		7FB8257049448B7BD9E7841D /* Pods_LaPosteEasyServicesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DFBB6B4B2004DB5EBC3A66 /* Pods_LaPosteEasyServicesTests.framework */; };
+		A55638AD1E4C6D7D00F14BEE /* LaPosteEasyServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55638A31E4C6D7D00F14BEE /* LaPosteEasyServices.framework */; };
+		A55638B21E4C6D7D00F14BEE /* LaPosteEasyServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55638B11E4C6D7D00F14BEE /* LaPosteEasyServicesTests.swift */; };
+		A55638B41E4C6D7D00F14BEE /* LaPosteEasyServices.h in Headers */ = {isa = PBXBuildFile; fileRef = A55638A61E4C6D7D00F14BEE /* LaPosteEasyServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A55638BF1E4C6E5200F14BEE /* LaPoste.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55638BD1E4C6E5200F14BEE /* LaPoste.swift */; };
+		A55638C01E4C6E5200F14BEE /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55638BE1E4C6E5200F14BEE /* PriceResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C323F31B1E43AFAF0051A682 /* PBXContainerItemProxy */ = {
+		A55638AE1E4C6D7D00F14BEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C323F3071E43AFAF0051A682 /* Project object */;
+			containerPortal = A556389A1E4C6D7D00F14BEE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C323F30F1E43AFAF0051A682;
+			remoteGlobalIDString = A55638A21E4C6D7D00F14BEE;
 			remoteInfo = LaPosteEasyServices;
-		};
-		C3CB3E291E47A40C003FB7C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C323F3071E43AFAF0051A682 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C323F3181E43AFAF0051A682;
-			remoteInfo = LaPosteEasyServicesTests;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C34934F01E4A7D590029C0EF /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C34934F11E4A7D700029C0EF /* Alamofire.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		49D5F4DC14EE17B4ED057604 /* Pods-LaPosteEasyServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServices/Pods-LaPosteEasyServices.debug.xcconfig"; sourceTree = "<group>"; };
-		4F574BBF58410C96055A2B1B /* Pods-LaPosteEasyServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServices/Pods-LaPosteEasyServices.release.xcconfig"; sourceTree = "<group>"; };
-		C30D63F71E43B4F900FB505F /* LaPoste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaPoste.swift; sourceTree = "<group>"; };
-		C323F3101E43AFAF0051A682 /* LaPosteEasyServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LaPosteEasyServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C323F3131E43AFAF0051A682 /* LaPosteEasyServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaPosteEasyServices.h; sourceTree = "<group>"; };
-		C323F3141E43AFAF0051A682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C323F3191E43AFAF0051A682 /* LaPosteEasyServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaPosteEasyServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C323F31E1E43AFAF0051A682 /* LaPosteEasyServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaPosteEasyServicesTests.swift; sourceTree = "<group>"; };
-		C323F3201E43AFAF0051A682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C34934EE1E4A7D180029C0EF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/LaPosteEasyServices-gfrhpytbjzvvipfdhlqfbyzvtvld/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
-		C3CB3E2B1E48FEB7003FB7C1 /* PriceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
-		F9297A7D4339BAC751AFE981 /* Pods_LaPosteEasyServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaPosteEasyServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DFBB6B4B2004DB5EBC3A66 /* Pods_LaPosteEasyServicesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaPosteEasyServicesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F41DDDE14EB47C402845931 /* Pods_LaPosteEasyServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaPosteEasyServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8BCE6F4B32A28AD4B7CA0D /* Pods-LaPosteEasyServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServices/Pods-LaPosteEasyServices.debug.xcconfig"; sourceTree = "<group>"; };
+		A55638A31E4C6D7D00F14BEE /* LaPosteEasyServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LaPosteEasyServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55638A61E4C6D7D00F14BEE /* LaPosteEasyServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaPosteEasyServices.h; sourceTree = "<group>"; };
+		A55638A71E4C6D7D00F14BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55638AC1E4C6D7D00F14BEE /* LaPosteEasyServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaPosteEasyServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55638B11E4C6D7D00F14BEE /* LaPosteEasyServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaPosteEasyServicesTests.swift; sourceTree = "<group>"; };
+		A55638B31E4C6D7D00F14BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55638BD1E4C6E5200F14BEE /* LaPoste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaPoste.swift; sourceTree = "<group>"; };
+		A55638BE1E4C6E5200F14BEE /* PriceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
+		B2B89C3E447F04BADBDF30E8 /* Pods-LaPosteEasyServicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServicesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServicesTests/Pods-LaPosteEasyServicesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6D0181236BE7556E53E77FE /* Pods-LaPosteEasyServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServices/Pods-LaPosteEasyServices.release.xcconfig"; sourceTree = "<group>"; };
+		E78EB69AFCA0C507930F2A11 /* Pods-LaPosteEasyServicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServicesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServicesTests/Pods-LaPosteEasyServicesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C323F30C1E43AFAF0051A682 /* Frameworks */ = {
+		A556389F1E4C6D7D00F14BEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A076B17E968C53F682142FCD /* Pods_LaPosteEasyServices.framework in Frameworks */,
+				52E8DF00650A8F6DD48D49BD /* Pods_LaPosteEasyServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C323F3161E43AFAF0051A682 /* Frameworks */ = {
+		A55638A91E4C6D7D00F14BEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C323F31A1E43AFAF0051A682 /* LaPosteEasyServices.framework in Frameworks */,
+				A55638AD1E4C6D7D00F14BEE /* LaPosteEasyServices.framework in Frameworks */,
+				7FB8257049448B7BD9E7841D /* Pods_LaPosteEasyServicesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C323F3061E43AFAF0051A682 = {
+		7E7CC0CA59013A6E4070941F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C323F3121E43AFAF0051A682 /* LaPosteEasyServices */,
-				C323F31D1E43AFAF0051A682 /* LaPosteEasyServicesTests */,
-				C323F3111E43AFAF0051A682 /* Products */,
-				D95A7FDA22EACB945A772970 /* Pods */,
-				DADAA291BF0ABC9E052301C3 /* Frameworks */,
+				7F41DDDE14EB47C402845931 /* Pods_LaPosteEasyServices.framework */,
+				28DFBB6B4B2004DB5EBC3A66 /* Pods_LaPosteEasyServicesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A55638991E4C6D7D00F14BEE = {
+			isa = PBXGroup;
+			children = (
+				A55638A51E4C6D7D00F14BEE /* LaPosteEasyServices */,
+				A55638B01E4C6D7D00F14BEE /* LaPosteEasyServicesTests */,
+				A55638A41E4C6D7D00F14BEE /* Products */,
+				F852B87B8775FFA16A07CD4D /* Pods */,
+				7E7CC0CA59013A6E4070941F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		C323F3111E43AFAF0051A682 /* Products */ = {
+		A55638A41E4C6D7D00F14BEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C323F3101E43AFAF0051A682 /* LaPosteEasyServices.framework */,
-				C323F3191E43AFAF0051A682 /* LaPosteEasyServicesTests.xctest */,
+				A55638A31E4C6D7D00F14BEE /* LaPosteEasyServices.framework */,
+				A55638AC1E4C6D7D00F14BEE /* LaPosteEasyServicesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C323F3121E43AFAF0051A682 /* LaPosteEasyServices */ = {
+		A55638A51E4C6D7D00F14BEE /* LaPosteEasyServices */ = {
 			isa = PBXGroup;
 			children = (
-				C323F3131E43AFAF0051A682 /* LaPosteEasyServices.h */,
-				C323F3141E43AFAF0051A682 /* Info.plist */,
-				C30D63F71E43B4F900FB505F /* LaPoste.swift */,
-				C3CB3E2B1E48FEB7003FB7C1 /* PriceResponse.swift */,
+				A55638BD1E4C6E5200F14BEE /* LaPoste.swift */,
+				A55638BE1E4C6E5200F14BEE /* PriceResponse.swift */,
+				A55638A61E4C6D7D00F14BEE /* LaPosteEasyServices.h */,
+				A55638A71E4C6D7D00F14BEE /* Info.plist */,
 			);
 			path = LaPosteEasyServices;
 			sourceTree = "<group>";
 		};
-		C323F31D1E43AFAF0051A682 /* LaPosteEasyServicesTests */ = {
+		A55638B01E4C6D7D00F14BEE /* LaPosteEasyServicesTests */ = {
 			isa = PBXGroup;
 			children = (
-				C323F31E1E43AFAF0051A682 /* LaPosteEasyServicesTests.swift */,
-				C323F3201E43AFAF0051A682 /* Info.plist */,
+				A55638B11E4C6D7D00F14BEE /* LaPosteEasyServicesTests.swift */,
+				A55638B31E4C6D7D00F14BEE /* Info.plist */,
 			);
 			path = LaPosteEasyServicesTests;
 			sourceTree = "<group>";
 		};
-		D95A7FDA22EACB945A772970 /* Pods */ = {
+		F852B87B8775FFA16A07CD4D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				49D5F4DC14EE17B4ED057604 /* Pods-LaPosteEasyServices.debug.xcconfig */,
-				4F574BBF58410C96055A2B1B /* Pods-LaPosteEasyServices.release.xcconfig */,
+				9A8BCE6F4B32A28AD4B7CA0D /* Pods-LaPosteEasyServices.debug.xcconfig */,
+				C6D0181236BE7556E53E77FE /* Pods-LaPosteEasyServices.release.xcconfig */,
+				B2B89C3E447F04BADBDF30E8 /* Pods-LaPosteEasyServicesTests.debug.xcconfig */,
+				E78EB69AFCA0C507930F2A11 /* Pods-LaPosteEasyServicesTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		DADAA291BF0ABC9E052301C3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C34934EE1E4A7D180029C0EF /* Alamofire.framework */,
-				F9297A7D4339BAC751AFE981 /* Pods_LaPosteEasyServices.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C323F30D1E43AFAF0051A682 /* Headers */ = {
+		A55638A01E4C6D7D00F14BEE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C323F3211E43AFAF0051A682 /* LaPosteEasyServices.h in Headers */,
+				A55638B41E4C6D7D00F14BEE /* LaPosteEasyServices.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C323F30F1E43AFAF0051A682 /* LaPosteEasyServices */ = {
+		A55638A21E4C6D7D00F14BEE /* LaPosteEasyServices */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C323F3241E43AFAF0051A682 /* Build configuration list for PBXNativeTarget "LaPosteEasyServices" */;
+			buildConfigurationList = A55638B71E4C6D7D00F14BEE /* Build configuration list for PBXNativeTarget "LaPosteEasyServices" */;
 			buildPhases = (
-				BC608FDBA990F2C8EDAEAA5A /* [CP] Check Pods Manifest.lock */,
-				C323F30B1E43AFAF0051A682 /* Sources */,
-				C323F30C1E43AFAF0051A682 /* Frameworks */,
-				C323F30D1E43AFAF0051A682 /* Headers */,
-				C323F30E1E43AFAF0051A682 /* Resources */,
-				FC68F69AAF77A28E2D333D58 /* [CP] Copy Pods Resources */,
-				C34934F01E4A7D590029C0EF /* CopyFiles */,
+				384679714B4859AC5CA05E46 /* [CP] Check Pods Manifest.lock */,
+				A556389E1E4C6D7D00F14BEE /* Sources */,
+				A556389F1E4C6D7D00F14BEE /* Frameworks */,
+				A55638A01E4C6D7D00F14BEE /* Headers */,
+				A55638A11E4C6D7D00F14BEE /* Resources */,
+				D932842846493221657EE1F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C3CB3E2A1E47A40C003FB7C1 /* PBXTargetDependency */,
 			);
 			name = LaPosteEasyServices;
 			productName = LaPosteEasyServices;
-			productReference = C323F3101E43AFAF0051A682 /* LaPosteEasyServices.framework */;
+			productReference = A55638A31E4C6D7D00F14BEE /* LaPosteEasyServices.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C323F3181E43AFAF0051A682 /* LaPosteEasyServicesTests */ = {
+		A55638AB1E4C6D7D00F14BEE /* LaPosteEasyServicesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C323F3271E43AFAF0051A682 /* Build configuration list for PBXNativeTarget "LaPosteEasyServicesTests" */;
+			buildConfigurationList = A55638BA1E4C6D7D00F14BEE /* Build configuration list for PBXNativeTarget "LaPosteEasyServicesTests" */;
 			buildPhases = (
-				C323F3151E43AFAF0051A682 /* Sources */,
-				C323F3161E43AFAF0051A682 /* Frameworks */,
-				C323F3171E43AFAF0051A682 /* Resources */,
+				44E272B5BA2ADC725FBB2914 /* [CP] Check Pods Manifest.lock */,
+				A55638A81E4C6D7D00F14BEE /* Sources */,
+				A55638A91E4C6D7D00F14BEE /* Frameworks */,
+				A55638AA1E4C6D7D00F14BEE /* Resources */,
+				DCD61FA3E64DF26ECCB50701 /* [CP] Embed Pods Frameworks */,
+				3D0873D3B9DBBE15EC04F6BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C323F31C1E43AFAF0051A682 /* PBXTargetDependency */,
+				A55638AF1E4C6D7D00F14BEE /* PBXTargetDependency */,
 			);
 			name = LaPosteEasyServicesTests;
 			productName = LaPosteEasyServicesTests;
-			productReference = C323F3191E43AFAF0051A682 /* LaPosteEasyServicesTests.xctest */;
+			productReference = A55638AC1E4C6D7D00F14BEE /* LaPosteEasyServicesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C323F3071E43AFAF0051A682 /* Project object */ = {
+		A556389A1E4C6D7D00F14BEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = Grunt;
+				ORGANIZATIONNAME = "Rémi";
 				TargetAttributes = {
-					C323F30F1E43AFAF0051A682 = {
+					A55638A21E4C6D7D00F14BEE = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
-					C323F3181E43AFAF0051A682 = {
+					A55638AB1E4C6D7D00F14BEE = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C323F30A1E43AFAF0051A682 /* Build configuration list for PBXProject "LaPosteEasyServices" */;
+			buildConfigurationList = A556389D1E4C6D7D00F14BEE /* Build configuration list for PBXProject "LaPosteEasyServices" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = C323F3061E43AFAF0051A682;
-			productRefGroup = C323F3111E43AFAF0051A682 /* Products */;
+			mainGroup = A55638991E4C6D7D00F14BEE;
+			productRefGroup = A55638A41E4C6D7D00F14BEE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C323F30F1E43AFAF0051A682 /* LaPosteEasyServices */,
-				C323F3181E43AFAF0051A682 /* LaPosteEasyServicesTests */,
+				A55638A21E4C6D7D00F14BEE /* LaPosteEasyServices */,
+				A55638AB1E4C6D7D00F14BEE /* LaPosteEasyServicesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C323F30E1E43AFAF0051A682 /* Resources */ = {
+		A55638A11E4C6D7D00F14BEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C323F3171E43AFAF0051A682 /* Resources */ = {
+		A55638AA1E4C6D7D00F14BEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,7 +236,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BC608FDBA990F2C8EDAEAA5A /* [CP] Check Pods Manifest.lock */ = {
+		384679714B4859AC5CA05E46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,7 +251,37 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FC68F69AAF77A28E2D333D58 /* [CP] Copy Pods Resources */ = {
+		3D0873D3B9DBBE15EC04F6BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaPosteEasyServicesTests/Pods-LaPosteEasyServicesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44E272B5BA2ADC725FBB2914 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D932842846493221657EE1F9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,43 +296,53 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaPosteEasyServices/Pods-LaPosteEasyServices-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DCD61FA3E64DF26ECCB50701 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaPosteEasyServicesTests/Pods-LaPosteEasyServicesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C323F30B1E43AFAF0051A682 /* Sources */ = {
+		A556389E1E4C6D7D00F14BEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CB3E2C1E48FEB7003FB7C1 /* PriceResponse.swift in Sources */,
-				C30D63F81E43B4F900FB505F /* LaPoste.swift in Sources */,
+				A55638C01E4C6E5200F14BEE /* PriceResponse.swift in Sources */,
+				A55638BF1E4C6E5200F14BEE /* LaPoste.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C323F3151E43AFAF0051A682 /* Sources */ = {
+		A55638A81E4C6D7D00F14BEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C323F31F1E43AFAF0051A682 /* LaPosteEasyServicesTests.swift in Sources */,
+				A55638B21E4C6D7D00F14BEE /* LaPosteEasyServicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C323F31C1E43AFAF0051A682 /* PBXTargetDependency */ = {
+		A55638AF1E4C6D7D00F14BEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C323F30F1E43AFAF0051A682 /* LaPosteEasyServices */;
-			targetProxy = C323F31B1E43AFAF0051A682 /* PBXContainerItemProxy */;
-		};
-		C3CB3E2A1E47A40C003FB7C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C323F3181E43AFAF0051A682 /* LaPosteEasyServicesTests */;
-			targetProxy = C3CB3E291E47A40C003FB7C1 /* PBXContainerItemProxy */;
+			target = A55638A21E4C6D7D00F14BEE /* LaPosteEasyServices */;
+			targetProxy = A55638AE1E4C6D7D00F14BEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		C323F3221E43AFAF0051A682 /* Debug */ = {
+		A55638B51E4C6D7D00F14BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -369,7 +395,7 @@
 			};
 			name = Debug;
 		};
-		C323F3231E43AFAF0051A682 /* Release */ = {
+		A55638B61E4C6D7D00F14BEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,9 +441,9 @@
 			};
 			name = Release;
 		};
-		C323F3251E43AFAF0051A682 /* Debug */ = {
+		A55638B81E4C6D7D00F14BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49D5F4DC14EE17B4ED057604 /* Pods-LaPosteEasyServices.debug.xcconfig */;
+			baseConfigurationReference = 9A8BCE6F4B32A28AD4B7CA0D /* Pods-LaPosteEasyServices.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -428,7 +454,7 @@
 				INFOPLIST_FILE = LaPosteEasyServices/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ESGI.LaPosteEasyServices;
+				PRODUCT_BUNDLE_IDENTIFIER = NW.LaPosteEasyServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -436,9 +462,9 @@
 			};
 			name = Debug;
 		};
-		C323F3261E43AFAF0051A682 /* Release */ = {
+		A55638B91E4C6D7D00F14BEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F574BBF58410C96055A2B1B /* Pods-LaPosteEasyServices.release.xcconfig */;
+			baseConfigurationReference = C6D0181236BE7556E53E77FE /* Pods-LaPosteEasyServices.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -449,32 +475,34 @@
 				INFOPLIST_FILE = LaPosteEasyServices/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ESGI.LaPosteEasyServices;
+				PRODUCT_BUNDLE_IDENTIFIER = NW.LaPosteEasyServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		C323F3281E43AFAF0051A682 /* Debug */ = {
+		A55638BB1E4C6D7D00F14BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B89C3E447F04BADBDF30E8 /* Pods-LaPosteEasyServicesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LaPosteEasyServicesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ESGI.LaPosteEasyServicesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = NW.LaPosteEasyServicesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		C323F3291E43AFAF0051A682 /* Release */ = {
+		A55638BC1E4C6D7D00F14BEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78EB69AFCA0C507930F2A11 /* Pods-LaPosteEasyServicesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LaPosteEasyServicesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ESGI.LaPosteEasyServicesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = NW.LaPosteEasyServicesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -483,34 +511,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C323F30A1E43AFAF0051A682 /* Build configuration list for PBXProject "LaPosteEasyServices" */ = {
+		A556389D1E4C6D7D00F14BEE /* Build configuration list for PBXProject "LaPosteEasyServices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C323F3221E43AFAF0051A682 /* Debug */,
-				C323F3231E43AFAF0051A682 /* Release */,
+				A55638B51E4C6D7D00F14BEE /* Debug */,
+				A55638B61E4C6D7D00F14BEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C323F3241E43AFAF0051A682 /* Build configuration list for PBXNativeTarget "LaPosteEasyServices" */ = {
+		A55638B71E4C6D7D00F14BEE /* Build configuration list for PBXNativeTarget "LaPosteEasyServices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C323F3251E43AFAF0051A682 /* Debug */,
-				C323F3261E43AFAF0051A682 /* Release */,
+				A55638B81E4C6D7D00F14BEE /* Debug */,
+				A55638B91E4C6D7D00F14BEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C323F3271E43AFAF0051A682 /* Build configuration list for PBXNativeTarget "LaPosteEasyServicesTests" */ = {
+		A55638BA1E4C6D7D00F14BEE /* Build configuration list for PBXNativeTarget "LaPosteEasyServicesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C323F3281E43AFAF0051A682 /* Debug */,
-				C323F3291E43AFAF0051A682 /* Release */,
+				A55638BB1E4C6D7D00F14BEE /* Debug */,
+				A55638BC1E4C6D7D00F14BEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C323F3071E43AFAF0051A682 /* Project object */;
+	rootObject = A556389A1E4C6D7D00F14BEE /* Project object */;
 }

@@ -2,8 +2,8 @@
 //  LaPosteEasyServices.h
 //  LaPosteEasyServices
 //
-//  Created by Grunt on 02/02/2017.
-//  Copyright © 2017 Grunt. All rights reserved.
+//  Created by Rémi on 09/02/2017.
+//  Copyright © 2017 Rémi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
