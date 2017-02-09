@@ -21,14 +21,14 @@ class LaPosteEasyServicesTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testPriceSuccess() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let expectations = expectation(description: "\(#function)\(#line)")
         print("------BEGIN------")
-        LaPoste.getPackagePrice(type: "Colis", weight: 1300) { value, error in
+        LaPoste.getPackagePrice(type: "colis", weight: 1300) { value, error in
             // use responseObject and error here
-            XCTAssert(error == nil, "OK")
+            XCTAssert(error == nil, "Prix récupéré")
             //print("value = \(value); error = \(error)")
             if (value != nil) {
                 let tab = value! as Array<PriceResponse>
@@ -36,6 +36,32 @@ class LaPosteEasyServicesTests: XCTestCase {
                     print("\(tab[i].product) : \(tab[i].channel)")
                     print("Price : \(tab[i].price)\(tab[i].currency)")
                 }
+            } else {
+                print (error!)
+            }
+            print("------END------")
+            expectations.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func testPriceFailure() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let expectations = expectation(description: "\(#function)\(#line)")
+        print("------BEGIN------")
+        LaPoste.getPackagePrice(type: "lettre recommandée", weight: 1300) { value, error in
+            // use responseObject and error here
+            XCTAssert(error != nil, "Il y a bien une erreur")
+            //print("value = \(value); error = \(error)")
+            if (value != nil) {
+                let tab = value! as Array<PriceResponse>
+                for i in (0..<tab.count) {
+                    print("\(tab[i].product) : \(tab[i].channel)")
+                    print("Price : \(tab[i].price)\(tab[i].currency)")
+                }
+            } else {
+                print (error!)
             }
             print("------END------")
             expectations.fulfill()
