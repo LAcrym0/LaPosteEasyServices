@@ -101,5 +101,35 @@ public class LaPoste {
                 }
         }
     }
+    
+    class func getCheckAddress(address: String, completionHandler: @escaping (Array<CheckAddress>?, Error?) -> ()) {
+        let headers: HTTPHeaders = [
+            "X-Okapi-Key":LaPoste.serverKey,
+            "Accept": "application/json"
+        ]
+        print("---Request prepared---")
+        
+        Alamofire.request("https://api.laposte.fr/controladresse/v1/addresses?q=\(address)", headers: headers)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+                print("---Response received---")
+                //print(response)
+                switch response.result {
+                case .success(let value):
+                    let dico = value as! NSDictionary
+//                    let array = value as! Array<Any>
+                    var responses: [CheckAddress] = []
+                    for i in (0..<dico.count) {
+                        if let resp = CheckAddress(json: dico[i] as! [String : Any]) {
+                            responses.append(resp)
+                            //print(resp.channel)
+                        }
+                    }
+                    completionHandler(responses, nil)
+                case .failure(let error):
+                    completionHandler(nil, error)
+                }
+        }
+    }
 }
 

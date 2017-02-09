@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03CE286E1E4D225100494435 /* CheckAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CE286D1E4D225100494435 /* CheckAddress.swift */; };
 		52E8DF00650A8F6DD48D49BD /* Pods_LaPosteEasyServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F41DDDE14EB47C402845931 /* Pods_LaPosteEasyServices.framework */; };
 		7FB8257049448B7BD9E7841D /* Pods_LaPosteEasyServicesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DFBB6B4B2004DB5EBC3A66 /* Pods_LaPosteEasyServicesTests.framework */; };
 		A55638AD1E4C6D7D00F14BEE /* LaPosteEasyServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55638A31E4C6D7D00F14BEE /* LaPosteEasyServices.framework */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CE286D1E4D225100494435 /* CheckAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAddress.swift; sourceTree = "<group>"; };
 		28DFBB6B4B2004DB5EBC3A66 /* Pods_LaPosteEasyServicesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaPosteEasyServicesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F41DDDE14EB47C402845931 /* Pods_LaPosteEasyServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaPosteEasyServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8BCE6F4B32A28AD4B7CA0D /* Pods-LaPosteEasyServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaPosteEasyServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaPosteEasyServices/Pods-LaPosteEasyServices.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				A55638A61E4C6D7D00F14BEE /* LaPosteEasyServices.h */,
 				A55638A71E4C6D7D00F14BEE /* Info.plist */,
 				A5B17A4F1E4CA5D000B06192 /* TrackResponse.swift */,
+				03CE286D1E4D225100494435 /* CheckAddress.swift */,
 			);
 			path = LaPosteEasyServices;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A55638C01E4C6E5200F14BEE /* PriceResponse.swift in Sources */,
+				03CE286E1E4D225100494435 /* CheckAddress.swift in Sources */,
 				A5B17A501E4CA5D000B06192 /* TrackResponse.swift in Sources */,
 				A55638BF1E4C6E5200F14BEE /* LaPoste.swift in Sources */,
 			);

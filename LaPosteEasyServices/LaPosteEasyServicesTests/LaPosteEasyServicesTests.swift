@@ -38,6 +38,8 @@ class LaPosteEasyServicesTests: XCTestCase {
             
             //display the different prices for each product
             if (value != nil) {
+                print("#############")
+                print(value)
                 let tab = value! as Array<PriceResponse>
                 for i in (0..<tab.count) {
                     print("\(tab[i].product) : \(tab[i].channel)")
@@ -126,4 +128,42 @@ class LaPosteEasyServicesTests: XCTestCase {
         //start timeout
         self.waitForExpectations(timeout: 15, handler: nil)
     }
+    
+    func testCheckAddress() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //this is necessary to wait the completionHandler, otherwise the test doesn't
+        //wait the response
+        let expectations = expectation(description: "\(#function)\(#line)")
+        
+        //webcall with the static method, correct parameters
+        let str = "116 AVENUE DU PRESIDENT KENNEDY"
+        LaPoste.getCheckAddress(address: str.replacingOccurrences(of: " ", with: "%20")) { value, error in
+            // use value and error here
+            
+            //the test is passed if the error is nil
+            XCTAssert(error == nil, "Adresse checkée")
+            
+            //display the different prices for each product
+            if (value != nil) {
+                print("@@@@@ NO ERROR -----------------------------------------")
+                print(value)
+                let tab = value! as Array<CheckAddress>
+                for i in (0..<tab.count) {
+                    print("######### \(tab[i].address) : \(tab[i].code)")
+                }
+            } else {
+                //display the error
+                print ("@@@@@@@@@@@ \(error!)")
+            }
+            
+            //stop the timeout before it is raised
+            expectations.fulfill()
+        }
+        
+        //start timeout
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+
 }
