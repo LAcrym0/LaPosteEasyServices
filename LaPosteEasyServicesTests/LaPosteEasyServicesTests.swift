@@ -43,11 +43,32 @@ class LaPosteEasyServicesTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
-    /*func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    //codes : Valid : 6Q03256365541
+    //Invalid : 6A06489133413 (too old)
+    //Invalid : 8J13257432657
+    
+    func testTrack() {
+        let expectations = expectation(description: "\(#function)\(#line)")
+        print("------BEGIN------")
+        LaPoste.getTrack(code: "6A06489133413"){ value, error in
+            // use responseObject and error here
+            XCTAssert(error == nil, "OK")
+            //print("value = \(value); error = \(error)")
+            if (value != nil) {
+                print(value!)
+            }
+            print("------END------")
+            expectations.fulfill()
         }
-    }*/
+        self.waitForExpectations(timeout: 15, handler: nil)
+        
+    }
+    
+    /*func testPerformanceExample() {
+     // This is an example of a performance test case.
+     self.measure {
+     // Put the code you want to measure the time of here.
+     }
+     }*/
     
 }
