@@ -138,7 +138,7 @@ class LaPosteEasyServicesTests: XCTestCase {
         let expectations = expectation(description: "\(#function)\(#line)")
         
         //webcall with the static method, correct parameters
-        let str = "116 AVENUE DU PRESIDENT KENNEDY"
+        let str = "remi ollivier 31 allee Sisley montigny"
         LaPoste.getCheckAddress(address: str.replacingOccurrences(of: " ", with: "%20")) { value, error in
             // use value and error here
             
@@ -147,16 +147,11 @@ class LaPosteEasyServicesTests: XCTestCase {
             
             //display the different prices for each product
             if (value != nil) {
-                print("@@@@@ NO ERROR -----------------------------------------")
-                print(value)
-                let tab = value! as Array<CheckAddress>
-                for i in (0..<tab.count) {
-                    print("######### \(tab[i].address) : \(tab[i].code)")
-                }
-            } else {
-                //display the error
-                print ("@@@@@@@@@@@ \(error!)")
-            }
+                print("Ville = \(value!.commune)")
+            } /*else {
+             //display the error
+             print ("@@@@@@@@@@@ \(error!)")
+             }*/
             
             //stop the timeout before it is raised
             expectations.fulfill()

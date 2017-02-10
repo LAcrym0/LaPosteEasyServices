@@ -8,23 +8,18 @@
 
 import Foundation
 
-public class CheckAddress {
-    //needed attributes
-    var address: String = String()
+public class CheckAddress{
+    
+    var adresse: String = String()
     var code: String = String()
     
     init?(json: [String: Any]) {
-        //check if the needed attributes are set, otherwise return a nil object
-        guard let address = json["address"],
-            let code = json["code"]
+        guard let adresse = json["adresse"] as? String,
+            let code = json["code"] as? String
             else {
                 return nil
         }
-        
-        //needed attributes
-        self.code = code as! String
-        self.address = address as! String
-        
+        self.adresse = adresse
+        self.code = code
     }
-
 }

@@ -24,12 +24,19 @@ class LaPosteEasyServicesTests: XCTestCase {
     func testPriceSuccess() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //this is necessary to wait the completionHandler, otherwise the test doesn't
+        //wait the response
         let expectations = expectation(description: "\(#function)\(#line)")
-        print("------BEGIN------")
+        
+        //webcall with the static method, correct parameters
         LaPoste.getPackagePrice(type: "colis", weight: 1300) { value, error in
-            // use responseObject and error here
+            // use value and error here
+            
+            //the test is passed if the error is nil
             XCTAssert(error == nil, "Prix récupéré")
-            //print("value = \(value); error = \(error)")
+            
+            //display the different prices for each product
             if (value != nil) {
                 let tab = value! as Array<PriceResponse>
                 for i in (0..<tab.count) {
@@ -37,23 +44,34 @@ class LaPosteEasyServicesTests: XCTestCase {
                     print("Price : \(tab[i].price)\(tab[i].currency)")
                 }
             } else {
+                //display the error
                 print (error!)
             }
-            print("------END------")
+            
+            //stop the timeout before it is raised
             expectations.fulfill()
         }
+        
+        //start timeout
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
     func testPriceFailure() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //this is necessary to wait the completionHandler, otherwise the test doesn't
+        //wait the response
         let expectations = expectation(description: "\(#function)\(#line)")
-        print("------BEGIN------")
+        
+        //webcall with the static method, incorrect parameters so there must be an error
         LaPoste.getPackagePrice(type: "lettre recommandée", weight: 1300) { value, error in
             // use responseObject and error here
+            
+            //the test is passed if we have an error
             XCTAssert(error != nil, "Il y a bien une erreur")
-            //print("value = \(value); error = \(error)")
+            
+            //display the different prices for each product
             if (value != nil) {
                 let tab = value! as Array<PriceResponse>
                 for i in (0..<tab.count) {
@@ -61,11 +79,15 @@ class LaPosteEasyServicesTests: XCTestCase {
                     print("Price : \(tab[i].price)\(tab[i].currency)")
                 }
             } else {
+                //display the error
                 print (error!)
             }
-            print("------END------")
+            
+            //stop the timeout before it is raised
             expectations.fulfill()
         }
+        
+        //start timeout
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
@@ -74,32 +96,34 @@ class LaPosteEasyServicesTests: XCTestCase {
     //Invalid : 8J13257432657
     
     func testTrack() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //this is necessary to wait the completionHandler, otherwise the test doesn't
+        //wait the response
         let expectations = expectation(description: "\(#function)\(#line)")
-        print("------BEGIN------")
         LaPoste.getTrack(code: "8G00466375322"){ value, error in
             // use responseObject and error here
+            
+            //the test is passed if the error is nil
             XCTAssert(error == nil, "OK")
-            //print("value = \(value); error = \(error)")
+            
+            //display a formatted track message
             if (value != nil) {
+                //if value is nil, we received an error message, display it
                 let track = value! as TrackResponse
                 if (track.status == nil){
                     print("Erreur. \(track.message)")
                 } else {
+                    //display a success track message
                     print("\(track.type!) numéro \(track.code). \(track.message) : \(track.status!). \nDernière modification : \(track.date!). Plus d'infos : \(track.link!)")
                 }
             }
-            print("------END------")
+            //stop the timeout before it is raised
             expectations.fulfill()
         }
-        self.waitForExpectations(timeout: 15, handler: nil)
         
+        //start timeout
+        self.waitForExpectations(timeout: 15, handler: nil)
     }
-    
-    /*func testPerformanceExample() {
-     // This is an example of a performance test case.
-     self.measure {
-     // Put the code you want to measure the time of here.
-     }
-     }*/
-    
 }
