@@ -1,5 +1,5 @@
 //
-//  CheckedAddresses.swift
+//  CheckedAddress.swift
 //  LaPosteEasyServices
 //
 //  Created by Nico on 10/02/2017.
