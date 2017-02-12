@@ -30,7 +30,7 @@ public class CheckedAddress{
             let codePostal = json["codePostal"] as? String,
             let codeCedex = json["codeCedex"] as? String,
             let commune = json["commune"] as? String,
-            let blocAdresse = json["commune"] as? [String]
+            let blocAdresse = json["blocAdresse"] as? [String]
             else {
                 return nil
         }

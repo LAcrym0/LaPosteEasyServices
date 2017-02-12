@@ -135,6 +135,7 @@ public class LaPoste {
                                 case .success(let value):
                                     print(value)
                                     let checkedAddress = CheckedAddress(json: value as! [String : Any])
+                                
                                     completionHandler(checkedAddress, nil)
                                 case .failure(let error):
                                     completionHandler(nil, error)

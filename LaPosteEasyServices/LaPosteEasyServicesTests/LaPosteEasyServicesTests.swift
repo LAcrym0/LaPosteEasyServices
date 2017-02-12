@@ -38,7 +38,6 @@ class LaPosteEasyServicesTests: XCTestCase {
             
             //display the different prices for each product
             if (value != nil) {
-                print("#############")
                 print(value)
                 let tab = value! as Array<PriceResponse>
                 for i in (0..<tab.count) {
