@@ -149,5 +149,61 @@ public class LaPoste {
                 }
         }
     }
+    
+    
+    class func getAllAddresses(address: String, completionHandler: @escaping ([CheckAddress]?, Error?) -> ()) {
+        let headers: HTTPHeaders = [
+            "X-Okapi-Key":LaPoste.serverKey,
+            "Accept": "application/json"
+        ]
+        print("---Request prepared---")
+        
+        Alamofire.request("https://api.laposte.fr/controladresse/v1/adresses?q=\(address)", headers: headers)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+                print("---Response received---")
+                //print(response)
+                switch response.result {
+                case .success(let value):
+                    print(value)
+                    let dico = value as! Array<Any>
+                    var responses: [CheckAddress] = []
+                    for i in (0..<dico.count) {
+                        if let resp = CheckAddress(json: dico[i] as! [String : Any]) {
+                            responses.append(resp)
+                        }
+                    }
+                    completionHandler(responses, nil)
+                case .failure(let error):
+                    completionHandler(nil, error)
+                }
+        }
+    }
+    
+    class func getCheckedAddressWithCode(code: String, completionHandler: @escaping (CheckedAddress?, Error?) -> ()) {
+        let headers: HTTPHeaders = [
+            "X-Okapi-Key":LaPoste.serverKey,
+            "Accept": "application/json"
+        ]
+        print("---Request prepared---")
+        
+        Alamofire.request("https://api.laposte.fr/controladresse/v1/adresses/\(code)", headers: headers)
+                            .validate(contentType: ["application/json"])
+                            .responseJSON { response in
+            print("---Response received---")
+                                //print(response)
+            switch response.result {
+            case .success(let value):
+                print(value)
+                let checkedAddress = CheckedAddress(json: value as! [String : Any])
+                                    
+                completionHandler(checkedAddress, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+                
+            }
+        }
+    }
+
 }
 

@@ -160,4 +160,84 @@ class LaPosteEasyServicesTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
 
+    func testAllAddresses() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //this is necessary to wait the completionHandler, otherwise the test doesn't
+        //wait the response
+        let expectations = expectation(description: "\(#function)\(#line)")
+        
+        //webcall with the static method, correct parameters
+        let str = "remi ollivier 31 allee Sisley montigny"
+        LaPoste.getAllAddresses(address: str.replacingOccurrences(of: " ", with: "%20")) { value, error in
+            // use value and error here
+            
+            //the test is passed if the error is nil
+            XCTAssert(error == nil, "Adresse checkée")
+            
+            //display the different prices for each product
+            if (value != nil) {
+                let tmp: Int = (value?.count)!
+                for i in (0..<tmp) {
+                    print("Adresse = \(value?[i].adresse)")
+                    print("Adresse = \(value?[i].code)")
+                }
+            } /*else {
+             //display the error
+             print ("@@@@@@@@@@@ \(error!)")
+             }*/
+            
+            //stop the timeout before it is raised
+            expectations.fulfill()
+        }
+        
+        //start timeout
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+
+    func testCheckedAddressWithCode() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //this is necessary to wait the completionHandler, otherwise the test doesn't
+        //wait the response
+        let expectations = expectation(description: "\(#function)\(#line)")
+        
+        //webcall with the static method, correct parameters
+        let str = "remi ollivier 31 allee Sisley montigny"
+        LaPoste.getAllAddresses(address: str.replacingOccurrences(of: " ", with: "%20")) { value, error in
+            // use value and error here
+            
+            //the test is passed if the error is nil
+            XCTAssert(error == nil, "Adresse checkée")
+            
+            //display the different prices for each product
+            if (value != nil) {
+                let tmp: Int = (value?.count)!
+                if (tmp>0) {
+                    LaPoste.getCheckedAddressWithCode(code: value![0].code) { value, error in
+                        // use value and error here
+                        
+                        //the test is passed if the error is nil
+                        XCTAssert(error == nil, "Adresse checkée")
+                        
+                        //display the different prices for each product
+                        if (value != nil) {
+                            print("Ville = \(value!.commune)")
+                        }
+                    }
+                }
+            } /*else {
+             //display the error
+             print ("@@@@@@@@@@@ \(error!)")
+             }*/
+            
+            //stop the timeout before it is raised
+            expectations.fulfill()
+        }
+        
+        //start timeout
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
 }
