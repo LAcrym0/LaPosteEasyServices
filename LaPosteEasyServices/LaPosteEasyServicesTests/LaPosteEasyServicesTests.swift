@@ -38,7 +38,6 @@ class LaPosteEasyServicesTests: XCTestCase {
             
             //display the different prices for each product
             if (value != nil) {
-                print(value)
                 let tab = value! as Array<PriceResponse>
                 for i in (0..<tab.count) {
                     print("\(tab[i].product) : \(tab[i].channel)")
@@ -144,13 +143,10 @@ class LaPosteEasyServicesTests: XCTestCase {
             //the test is passed if the error is nil
             XCTAssert(error == nil, "Adresse checkée")
             
-            //display the different prices for each product
+            //display the city name of the selected address
             if (value != nil) {
                 print("Ville = \(value!.commune)")
-            } /*else {
-             //display the error
-             print ("@@@@@@@@@@@ \(error!)")
-             }*/
+            }
             
             //stop the timeout before it is raised
             expectations.fulfill()
@@ -176,17 +172,14 @@ class LaPosteEasyServicesTests: XCTestCase {
             //the test is passed if the error is nil
             XCTAssert(error == nil, "Adresse checkée")
             
-            //display the different prices for each product
+            //display the differents addresses and the codes associated
             if (value != nil) {
                 let tmp: Int = (value?.count)!
                 for i in (0..<tmp) {
                     print("Adresse = \(value?[i].adresse)")
                     print("Adresse = \(value?[i].code)")
                 }
-            } /*else {
-             //display the error
-             print ("@@@@@@@@@@@ \(error!)")
-             }*/
+            }
             
             //stop the timeout before it is raised
             expectations.fulfill()
@@ -212,7 +205,6 @@ class LaPosteEasyServicesTests: XCTestCase {
             //the test is passed if the error is nil
             XCTAssert(error == nil, "Adresse checkée")
             
-            //display the different prices for each product
             if (value != nil) {
                 let tmp: Int = (value?.count)!
                 if (tmp>0) {
@@ -222,16 +214,13 @@ class LaPosteEasyServicesTests: XCTestCase {
                         //the test is passed if the error is nil
                         XCTAssert(error == nil, "Adresse checkée")
                         
-                        //display the different prices for each product
+                        //display the city name of the selected address
                         if (value != nil) {
                             print("Ville = \(value!.commune)")
                         }
                     }
                 }
-            } /*else {
-             //display the error
-             print ("@@@@@@@@@@@ \(error!)")
-             }*/
+            }
             
             //stop the timeout before it is raised
             expectations.fulfill()

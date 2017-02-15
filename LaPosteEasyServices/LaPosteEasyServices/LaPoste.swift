@@ -102,21 +102,34 @@ public class LaPoste {
         }
     }
     
+    
+    /**
+     * Static function that takes 1 parameter and escapes a completionHandler to return the returnValue
+     * and the error. Both may be nil.
+     * If a request is successful, it will return a CheckedAddress for the value and nil for the
+     * error
+     * If a request fails, it will return nil for the value and the error
+     * @param address : String that defines the receiver's address.
+     **/
     class func getCheckAddress(address: String, completionHandler: @escaping (CheckedAddress?, Error?) -> ()) {
+        //format the header to authorize and get correct response format
         let headers: HTTPHeaders = [
             "X-Okapi-Key":LaPoste.serverKey,
             "Accept": "application/json"
         ]
         print("---Request prepared---")
         
+        //send the request with headers, format it with apiUrl and correct endpoint, then add the
+        //parameters.
         Alamofire.request("https://api.laposte.fr/controladresse/v1/adresses?q=\(address)", headers: headers)
             .validate(contentType: ["application/json"])
             .responseJSON { response in
                 print("---Response received---")
-                //print(response)
+                
+                //test the response to know if it failed or succeeded
                 switch response.result {
                 case .success(let value):
-                    print(value)
+                    //we get the response and format it in a tab of CheckAddress object
                     let dico = value as! Array<Any>
                     var responses: [CheckAddress] = []
                     for i in (0..<dico.count) {
@@ -126,46 +139,65 @@ public class LaPoste {
                     }
                     if (responses.count > 0) {
                         let requestCode = responses[0].code
+                        
+                        //send the request with headers, format it with apiUrl and correct endpoint, then add the
+                        //parameters.
                         Alamofire.request("https://api.laposte.fr/controladresse/v1/adresses/\(requestCode)", headers: headers)
                             .validate(contentType: ["application/json"])
                             .responseJSON { response in
                                 print("---Response received---")
-                                //print(response)
+                                
+                                //test the response to know if it failed or succeeded
                                 switch response.result {
                                 case .success(let value):
-                                    print(value)
+                                    //we get the response and format it in a CheckedAddress object
                                     let checkedAddress = CheckedAddress(json: value as! [String : Any])
                                 
+                                    //return the value and a nil error
                                     completionHandler(checkedAddress, nil)
                                 case .failure(let error):
+                                    //return nil for the value and the error
                                     completionHandler(nil, error)
                                 }
                         }
                     }
-                    //completionHandler(responses, nil)
                     
                 case .failure(let error):
+                    //return nil for the value and the error
                     completionHandler(nil, error)
                 }
         }
     }
     
     
+    /**
+     * Static function that takes 1 parameter and escapes a completionHandler to return the returnValue
+     * and the error. Both may be nil.
+     * If a request is successful, it will return a tab of CheckAddress for the value and nil for the
+     * error
+     * If a request fails, it will return nil for the value and the error
+     * @param address : String that defines the receiver's address.
+     **/
     class func getAllAddresses(address: String, completionHandler: @escaping ([CheckAddress]?, Error?) -> ()) {
+        //format the header to authorize and get correct response format
         let headers: HTTPHeaders = [
             "X-Okapi-Key":LaPoste.serverKey,
             "Accept": "application/json"
         ]
         print("---Request prepared---")
         
+        //send the request with headers, format it with apiUrl and correct endpoint, then add the
+        //parameters.
         Alamofire.request("https://api.laposte.fr/controladresse/v1/adresses?q=\(address)", headers: headers)
             .validate(contentType: ["application/json"])
             .responseJSON { response in
                 print("---Response received---")
-                //print(response)
+                
+                //test the response to know if it failed or succeeded
                 switch response.result {
                 case .success(let value):
-                    print(value)
+                    //we get the response and format it in a tab of CheckAddress object
+                    
                     let dico = value as! Array<Any>
                     var responses: [CheckAddress] = []
                     for i in (0..<dico.count) {
@@ -173,13 +205,25 @@ public class LaPoste {
                             responses.append(resp)
                         }
                     }
+                    //return the value and a nil error
                     completionHandler(responses, nil)
                 case .failure(let error):
+                    //return nil for the value and the error
                     completionHandler(nil, error)
                 }
         }
     }
     
+    
+    
+    /**
+     * Static function that takes 1 parameter and escapes a completionHandler to return the returnValue
+     * and the error. Both may be nil.
+     * If a request is successful, it will return a CheckedAddress for the value and nil for the
+     * error
+     * If a request fails, it will return nil for the value and the error
+     * @param code : String that defines the code of the address.
+     **/
     class func getCheckedAddressWithCode(code: String, completionHandler: @escaping (CheckedAddress?, Error?) -> ()) {
         let headers: HTTPHeaders = [
             "X-Okapi-Key":LaPoste.serverKey,
@@ -187,20 +231,24 @@ public class LaPoste {
         ]
         print("---Request prepared---")
         
+        //send the request with headers, format it with apiUrl and correct endpoint, then add the
+        //parameters.
         Alamofire.request("https://api.laposte.fr/controladresse/v1/adresses/\(code)", headers: headers)
-                            .validate(contentType: ["application/json"])
-                            .responseJSON { response in
-            print("---Response received---")
-                                //print(response)
-            switch response.result {
-            case .success(let value):
-                print(value)
-                let checkedAddress = CheckedAddress(json: value as! [String : Any])
-                                    
-                completionHandler(checkedAddress, nil)
-            case .failure(let error):
-                completionHandler(nil, error)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+                print("---Response received---")
                 
+                //test the response to know if it failed or succeeded
+                switch response.result {
+                case .success(let value):
+                    //we get the response and format it in a CheckedAddress object
+                    let checkedAddress = CheckedAddress(json: value as! [String : Any])
+                                    
+                    completionHandler(checkedAddress, nil)
+                case .failure(let error):
+                    //return nil for the value and the error
+                    completionHandler(nil, error)
+                    
             }
         }
     }
