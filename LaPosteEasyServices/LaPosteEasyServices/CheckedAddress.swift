@@ -3,11 +3,16 @@
 //  LaPosteEasyServices
 //
 //  Created by Nico on 10/02/2017.
-//  Copyright © 2017 Rémi. All rights reserved.
+//  Copyright © 2017 Nico. All rights reserved.
 //
 
 import Foundation
 
+/**
+ * The object that stores a CheckedAddress object received by the web call
+ * The attributes can't be nil
+ * In case of an error return nil
+ **/
 public class CheckedAddress{
     
     var destinataire: String = String()
